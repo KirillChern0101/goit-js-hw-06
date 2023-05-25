@@ -14,3 +14,20 @@ const images = [
 ];
 
 const listEl = document.querySelector(".gallery");
+
+const markup = images
+  .map(
+    (image) =>
+      `<li><img class="picture" src=${image.url} width= "400" alt= ${image.alt}></img></li>`
+  )
+  .join("");
+
+listEl.insertAdjacentHTML("beforeend", markup);
+
+// listEl.style
+
+const pictures = document.querySelectorAll(".picture");
+
+listEl.style.display = "flex";
+listEl.style.listStyle = "none";
+listEl.style.justifyContent = "space-evenly";
