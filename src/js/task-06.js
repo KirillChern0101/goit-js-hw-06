@@ -3,7 +3,7 @@ console.log(validationInput.getAttribute("data-length"));
 
 validationInput.addEventListener("blur", (event) => {
   if (
-    event.target.value.length == validationInput.getAttribute("data-length")
+    event.target.value.length === validationInput.getAttribute("data-length")
   ) {
     validationInput.classList.add("valid");
     if (validationInput.classList.contains("invalid")) {
